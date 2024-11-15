@@ -1,0 +1,15 @@
+- Wybierz kartę
+- Losowanie karty 
+- Pokaż jej kolor i zaaktualizuj prawdopodobieństwo że jest to wybrana karta
+- Odsłoń wartość karty
+
+P(B) - wylosowanie czerwonej
+P(AnB) - wylosowanie króla i serca
+
+P(A|B) - skoro wylosowano czerwoną jaka jest szansa że jest to król
+
+P(A) karta jest sercem
+P(B) karta jest królem
+
+P(AnB) = 1/52
+P(B) = 4/52
