@@ -1,33 +1,28 @@
-from random import randint
-
 # ♣ - clubs (c)
 # ♦ - diamonds (d)
 # ♥ - hearts (h)
 # ♠ - spades (s)
 
+from random import randint
+
 def calculate_probability():
-    num_of_c = len([c for c in cards if "♣" in c])
-    num_of_d = len([d for d in cards if "♦" in d])
-    num_of_h = len([h for h in cards if "♥" in h])
-    num_of_s = len([s for s in cards if "♠" in s])
     num_of_all_cards = len(cards)
 
-    perc_c = str(round(num_of_c / num_of_all_cards * 100, 2)) + "%"
-    perc_d = str(round(num_of_d / num_of_all_cards * 100, 2)) + "%"
-    perc_h = str(round(num_of_h / num_of_all_cards * 100, 2)) + "%"
-    perc_s = str(round(num_of_s / num_of_all_cards * 100, 2)) + "%"
-    
-    print("Chance for ♣ : " + perc_c)
-    print("Chance for ♦ : " + perc_d)
-    print("Chance for ♥ : " + perc_h)
-    print("Chance for ♠ : " + perc_s)
-    
+    num_of_symbols = [] # [n♣, n♦, n♥, n♠]
+    for symb in symbols:
+        num_of_symbols.append(len([x for x in cards if symb in x]))
 
+    perc_for_symbols = [] # [♣%, ♦%, ♥%, ♠%]
+    for num in num_of_symbols:
+        perc_for_symbols.append(str(round(num / num_of_all_cards * 100, 2)) + "%")
+
+    for i, symb in enumerate(symbols):
+        print("Chance for " + symb + " : " + perc_for_symbols[i])
+    
 symbols = ["♣", "♦", "♥", "♠"]
 values = ["A", "K", "Q", "J", "10", "9", "8", "7", "6", "5", "4", "3", "2"] 
 
 cards = []
-
 for val in values:
     for symb in symbols:
         cards.append(val + symb)
