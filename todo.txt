@@ -1,0 +1,5 @@
+- Prawdopodobieństwo wylosowania "♣", "♦", "♥", "♠"
+- Losowanie karty i pokazanie jej
+- Aktualizacja Prawdopodobieństwa wylosowania "♣", "♦", "♥", "♠"
+- Losowanie karty i pokazanie jej
+↻
